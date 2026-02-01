@@ -3,7 +3,7 @@
 	--primary-text: #fff;
 	--secondary: #555;
 	--secondary-text: #b8b8b8;
-	--accent: #1f5baa;
+	--accent: #f09b3a;
 	--accent-text: #fff;
 	--font-size: 1rem;
 	--color-transition: color 0.1s ease-in-out;
@@ -61,11 +61,14 @@ body {
 	padding: var(--container-padding);
 	cursor: pointer;
 	color: var(--secondary-text);
-	transition: var(--color-transition);
+	border-left: 0px var(--accent) solid;
+	transition: all 0.15s ease-in-out;
+	border-left: 0px var(--accent) solid;
 }
 
 .item:hover {
 	color: var(--primary-text);
+	border-left: 5px var(--accent) solid;
 }
 
 .icon {
@@ -110,8 +113,8 @@ a:hover {
 	color: var(--primary-text);
 }
 
-@media only screen and (max-width: 350px) {
-	.footer {
-		justify-content: space-between;
+@media only screen and (max-width: 450px) {
+	:root {
+		--container-padding: 0.75rem 2rem;
 	}
 }
